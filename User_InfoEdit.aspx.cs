@@ -78,7 +78,7 @@ public partial class _Default :basepage
             cmd.ExecuteNonQuery();
             UserInfo uu = new UserInfo(userName.Text, nickname, truename, u.Password, u.Money, phonenum, addr);
             Session["user"] = uu;
-            Response.Write("<script type='text/javascript'>alert('用户资料修改成功！');</script>");
+            Response.Write("<script type='text/javascript'>alert('Edited user detail successfully！');</script>");
             Response.Write("<script type='text/javascript' language='javascript'>parent.location.reload();</script>");
         }
         catch (Exception ex)
