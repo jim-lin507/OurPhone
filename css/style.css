@@ -1,0 +1,170 @@
+body, td, div, p, input, textarea, select	
+{
+    color:			#222222;
+	margin:				0px;
+	padding:0;
+	border:#b7cefa 1px botted;
+	font-size:12px;
+	font-family:'宋体',verdana,'Lucida Grande','Lucida Sans Unicode',新宋体,arial,sans-serif;
+	/*background:#fff;*/
+}
+
+body	{
+	margin:				0px;
+	text-align:			center;
+	SCROLLBAR-HIGHLIGHT-COLOR: buttonface;
+	SCROLLBAR-SHADOW-COLOR: buttonface;
+	SCROLLBAR-3DLIGHT-COLOR: buttonhighlight;
+	SCROLLBAR-TRACK-COLOR: #eeeeee;
+	SCROLLBAR-DARKSHADOW-COLOR: buttonshadow;
+}
+
+IMG
+{
+    border=0;
+}
+
+td
+{
+    
+}
+
+a	{
+	color:			#003399;
+	text-decoration:none;
+}
+A:visited
+{
+    color:			#003399;
+	text-decoration:none;
+}
+a:hover
+{
+    color:          #ff3300;
+    text-decoration: underline;
+}
+a:link
+{
+    color:			#003399;
+	text-decoration:none;
+}
+
+A:active
+{
+    color:			#ff3300;
+	text-decoration:none;
+}
+
+#head{
+	height:150px;
+	width:auto;
+	background:#F0e68c ;
+}
+#navigation{
+	height:30px;
+	width:auto;
+	background:#fff url(images/1.jpg);
+}
+#ad{
+	width:auto;
+	height:150px;
+	border:#dcdcdc 1px solid;
+	background:url(images/ad.jpg);
+}
+/*------------------------------------------*/
+#middle{
+	width:auto;
+	height:500px;
+	
+}
+#left{
+	width:200px;
+	height:auto;
+	float:left;
+}
+.list{
+	margin:2px 0px 0px 2px;
+	width:auto;
+	height:250px;
+	/*border:#dcdcdc 1px solid;*/
+	background:#fff url(images/list.jpg);
+}	
+.title{
+	width:auto;
+	height:35px;
+	background:#fff url(images/title.jpg);
+}
+#right{
+	width:500px;
+	height:400px;
+	float:right;
+	margin:2px 2px 0px 0px;
+	border:#dcdcdc 1px solid;
+	
+}
+/*---------------------------------------------------*/
+#bottom{
+	width:auto;
+	height:100px;
+	padding-top:10px;
+	text-align:center;
+	border:#dcdcdc 1px solid;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorStr=#F0e68c,endColorStr=#ffa500);
+}
+/*-------------------------------------*/
+.font{
+	line-height:5px;
+}
+
+/*------------导航-----------------*/
+#submenu {
+margin-left:5px; 
+MARGIN-top:5px; 
+PADDING-left:5px; 
+COLOR: #000;
+width:auto; 
+height:auto;
+float:left;
+font-size:15px;
+} 
+
+#submenu ul { 
+CLEAR: left; 
+MARGIN: 0px; 
+PADDING:0px; 
+BORDER:0;
+LIST-STYLE-TYPE: none; 
+TEXT-ALIGN: center; 
+DISPLAY:inline;
+} 
+
+#submenu li { 
+FLOAT: left; 
+DISPLAY: block; 
+MARGIN: 0px; 
+PADDING: 0px; 
+TEXT-ALIGN: center} 
+
+#submenu li a { 
+DISPLAY: block; 
+PADDING:0; 
+FONT-WEIGHT: normal; 
+WIDTH: 100%; 
+COLOR: #000; 
+TEXT-DECORATION: none; 
+} 
+
+#submenu li a:hover {
+text-decoration: underline;
+COLOR: #0000cd; } 
+
+#submenu ul li#one A { WIDTH: 50px} 
+#submenu ul li#two A { WIDTH: 80px} 
+#submenu ul li#three A { WIDTH: 80px} 
+#submenu ul li#four A { WIDTH: 80px} 
+#submenu ul li#five A { WIDTH: 80px} 
+#submenu ul li#six A { WIDTH: 80px} 
+#submenu ul li#seven A { WIDTH: 80px} 
+#submenu ul li#eight A { WIDTH: 80px} 
+#submenu ul li#nine A { WIDTH: 80px}
+#submenu ul li#ten A { WIDTH: 80px}

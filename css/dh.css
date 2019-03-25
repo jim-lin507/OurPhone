@@ -1,0 +1,42 @@
+﻿        #menu
+        {
+            margin-left:350px;
+        }
+        #menu ul
+        {
+            display: block;
+            margin: 0;
+            position: relative;
+        }
+        #menu ul li
+        {
+            list-style-type: none;
+            float: left;
+            height: 30px;
+            width: 100px;
+            text-align: center;
+            background: #EDEDED;
+        }
+        #menu ul li ul
+        {
+            position: relative;
+            right: 0px;
+            font-size: 12px;
+            display: none;
+        }
+        #menu ul li a
+        {
+            text-decoration: none;
+            color: #000;
+            font-size: 12px;
+            font-family: "Arial","宋体";
+        }
+        #menu ul li:hover
+        {
+            background: #fff;
+            cursor: pointer;
+        }
+        #menu ul li:hover ul
+        {
+            display: list-item;
+        }

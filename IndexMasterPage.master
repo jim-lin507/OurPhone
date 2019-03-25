@@ -1,0 +1,290 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="IndexMasterPage.master.cs" Inherits="IndexMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Our Phone</title>
+    <link href="./css/m18.css" rel="stylesheet" type="text/css" />
+    <link href="./css/dh.css" rel="stylesheet" type="text/css" />
+    <script src="script/jquery-1.3.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function DisplayContent(str) {
+            if (str == 'over')
+                document.getElementById("count").style.visibility = "visible";
+            if (str == 'out')
+                document.getElementById("count").style.visibility = "hidden";
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="margin: 0px;">
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="header">
+            <div class="top_nav">
+                <div class="vcotton_box">
+                    <ul class="head_left">
+                        <li id="user_login_status">
+                            <asp:Label ID="Label1" runat="server" Text="Hello,welcome to my shopper！Please"></asp:Label>
+                            <a id="login" href="login.aspx" style="color: #f00" runat="server">Log in</a>
+                            <a id="register" runat="server" style="color: #f00" href="register.aspx">Sign up</a>
+
+                        </li>
+                    </ul>
+                    <div style="float: right;">
+                        <span class="fuwurexian"><a href="index.aspx">
+                            <img title="20130318210047_5625.jpg" alt="20130318210047_5625.jpg" src="images/20130318210047_5625.jpg" border="0"></a><br>
+                        </span>
+                    </div>
+                    <div style="padding-left: 40px;" id="menu" runat="server">
+                        <ul>
+                            <li><a href="User_Edit.aspx" target="_self">My Details</a>
+                                <ul>
+                                    <li><a href="product_buy.aspx" target="_self">My Orders</a></li>
+                                    <li><a href="WishList.aspx" target="_self">My Watchlist</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li><a href="StoreOpen.aspx" runat="server" id="noStore" target="_self">Open Store</a>
+                                <ul runat="server" id="yesStore">
+                                    <li><a href="product_add.aspx" target="_self">Add products</a></li>
+                                    <li><a href="product_sale.aspx" target="_self">Selled Products</a></li>
+                                    <li><a href="product_chushou.aspx" target="_self">Selling Products</a></li>
+                                    <li><a href="product_cangku.aspx" target="_self">Products in Stock</a></li>
+                                </ul>
+                                <ul runat="server" id="adminCa" visible="false">
+                                    <li><a href="CategoryManager.aspx" target="_self">CategoryManager</a></li>
+                                    <li><a href="SaleStatistics.aspx" target="_self">Sale Statistics</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="head_r">
+                        <a href="OnlineConsult1.aspx">Online consultation</a> | <a href="ComplaintSuggestion.aspx">Complaint or Suggestion</a> | <span>Call</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="width_all">
+            <div id="christmas">
+                <div class="christmas_bg">
+                    <p class="logo">
+                        <a href="index.aspx">
+                            <img src="./images/logo2.jpg" style="border-width: 0px;" /></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="nav">
+            <div class="nav_c" id="ty_menu_title">
+                <ul id="nav_top">
+                    <li>
+                        <b><a class="ty_menu_select" href="index.aspx"><span>Home</span></a></b>
+                    </li>
+                    <li runat="server" id="spc"></li>
+                    <li>
+                        <b><a class="ty_menu_select" href="#"><span>Smart Phone</span></a></b>
+                    </li>
+                    <li>
+                        <b><a class="ty_menu_select" href="#"><span>Music Phone</span></a></b>
+                    </li>
+                    <li>
+                        <b><a class="ty_menu_select" href="#"><span>Game Phone</span></a></b>
+                    </li>
+                    <li>
+                        <b><a class="ty_menu_select" href="#"><span>Business Phone</span></a></b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="search">
+            <div class="vcotton_box">
+                <input runat="server" style="width: 320px;" type="text" id="txt_Search_Keywords" class="head_search" />
+                <asp:Button Style="cursor: pointer; width: 80px;" ID="searchButton" runat="server"
+                    Text="Search" class="but" OnClick="searchButton_Click" />
+            </div>
+        </div>
+        <div class="main">
+
+
+            <div class="vcotton_box">
+                <div style="float: left; margin-bottom: 6px; text-align: center; width: 980px; overflow: hidden;">
+                        <%--<img title="Welcome to my shopper" border="0" alt="Welcome to my shopper" src="./images/20120325024620_2228.jpg" />--%></a>
+                </div>
+                <div class="left_box">
+                    <div style="float: left; width: 770px; height: 350px; overflow: hidden;">
+                        <div id="lunhuanJS">
+                            <div class="lunhuan_content">
+                                <div class="tab_1">
+                                    <div class="tab_img" id="pic">
+                                        <a href="#">
+                                            <img title="" alt="" src="./images/round1.jpg" border="0" style="display: inline;" /></a>
+                                        <a href="#">
+                                            <img title="" alt="" src="./images/round2.jpg" border="0" style="display: none;" /></a>
+                                        <a href="#">
+                                            <img title="" alt="" src="./images/round3.jpg" border="0" style="display: none;" /></a>
+                                       <a href="#">
+                                            <img title="" alt="" src="./images/round4.jpg" border="0" style="display: none;" /></a>
+                                        <a href="#">
+                                            <img title="" alt="" src="./images/round5.jpg" border="0" style="display: none;" /></a>
+                                    </div>
+                                    <div style="clear: both;"></div>
+                                    <div class="tab_menu">
+                                        <ul id="play">
+                                            <li class="lunhuanJSbg active bg normal" id="li0" style="cursor: pointer;" alt="1"><a>&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;</a> </li>
+                                            <li class="lunhuanJSbg active bg normal" id="li1" style="cursor: pointer;" alt="2"><a>&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;</a> </li>
+                                            <li class="lunhuanJSbg active bg normal" id="li2" style="cursor: pointer;" alt="3"><a>&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;</a> </li>
+                                            <li class="lunhuanJSbg active bg normal" id="li3" style="cursor: pointer;" alt="4"><a>&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;</a> </li>
+                                            <li class="lunhuanJSbg active bg normal" id="li4" style="cursor: pointer;" alt="5"><a>&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;</a> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div style="clear: both;"></div>
+                            </div>
+                            <!--右侧 -->
+                        </div>
+                    </div>
+                    <div class="martop10 sort_box">
+                        <div class="index_tit index_tit_bg">All Categories</div>
+                        <ul class="sort">
+                            <asp:Repeater ID="rpt" runat="server" OnItemDataBound="rpt_ItemDataBound">
+                                <ItemTemplate>
+                                    <asp:Label ID="lbTypeId" runat="server" Text='<%#Eval("TypeId") %>' Visible="false"></asp:Label>
+                                    <li>
+                                        <span class="bgsortname"><%#Eval("TypeName") %></span>&nbsp;|&nbsp;
+                <asp:Repeater ID="rptSmallType" runat="server">
+                    <ItemTemplate>
+
+                        <a href='productList.aspx?smalltypeid=<%#Eval("SmallTypeId") %>&operate=add'><%#Eval("SmallTypeName") %></a>&nbsp;
+                    </ItemTemplate>
+                </asp:Repeater>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </ul>
+                    </div>
+                </div>
+                <!--left_box over-->
+
+                <div class="right_box">
+                    <div class="vnote_tit">
+                        <marquee style="width: 140px; height: 32px; font-size: 12px;" scrollamount="3">
+                        <a href="#" target="_blank" title="Today is Queen's birthday, many goods are on sale.">Today is Queen's birthday, many goods are on sale.</a>
+                    </marquee>
+                    </div>
+                    <div style="float: left; margin-top: 10px; width: 220px; height: 288px; overflow: hidden;">
+                        <img style="cursor: pointer" src="./images/zhounian.jpg" />
+                    </div>
+                </div>
+                <div class="right_box">
+		        <div style="float:left;margin-top:10px;width:220px;height:133px;overflow:hidden;"><img style=" cursor:pointer"  border="0" alt="phone" src="./images/jinwu.jpg"></div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var _c = _h = 0;
+            $(function () {
+                $('#play > li').click(function () {
+                    var i = $(this).attr('alt') - 1;
+                    clearInterval(_h);
+                    _c = i;
+                    play();
+                    change(i);
+                })
+                $("#pic img").hover(function () { clearInterval(_h) }, function () { play() });
+                play();
+            })
+            function play() {
+                _h = setInterval("auto()", 6000);
+            }
+
+            function change(i) {
+                $('#play > li').addClass("bg normal");
+
+                $("#li" + i).removeClass("bg normal");
+                $("#li" + i).addClass("bg active");
+                $("#pic img").hide().eq(i).fadeIn('slow');
+            }
+            function auto() {
+                _c = _c > 3 ? 0 : _c + 1;
+                change(_c);
+            }
+        </script>
+
+
+        <div class="vcotton_box">
+            <div class="martop10 index_tit2 index_tit_bg">Top</div>
+            <asp:Repeater ID="hotProducts" runat="server"
+                OnItemDataBound="hotProducts_ItemDataBound">
+                <ItemTemplate>
+                    <asp:HiddenField ID="hiddenPrice" Value='<%# Eval("Price")%>' runat="server" />
+                    <asp:HiddenField ID="hiddenBargainPrice" Value='<%# Eval("BargainPrice")%>' runat="server" />
+                    <div class="special_mid martop5">
+                        <a href='infodetail.aspx?productId=<%#Eval("ProductId") %>' target="_self">
+                            <img width="350px" height="350px;" style="cursor: pointer" title="<%# Eval("Name")%>" border="0" alt='' src='showProductPicture.aspx?productid=<%# Eval("ProductId")%>' />
+                        </a>
+                        <br />
+                        <div align="center" style='padding-top: 5px; padding-left: 60px;'>
+                            <a id='Default_ctl28' href='infodetail.aspx?productid=<%# Eval("ProductId")%>'><%# Eval("Name")%></a><br>
+                            <span class='SalePrice' style="color: #a10101;">¥<asp:Label ID="price" runat="server" Text='<%# Eval("Price")%>'></asp:Label></span>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+
+            <!--<div class="special_mid martop5"><a href="infodetail.aspx?id=10" target="_self"><img style=" cursor:pointer" title="三星 Galaxy Note Edge (N9150) 幻影白 移动联通4G手机" border="0" alt="三星 Galaxy Note Edge (N9150) 幻影白 移动联通4G手机" src="./proimages/zhengnengliang.jpg"></a><br></div>
+	<div class="special_mid martop5"><a href="infodetail.aspx?id=11" target="_self"><img style=" cursor:pointer" title="联想 黄金斗士 Note8(A936)融雪白 联通4G手机 双卡双待" border="0" alt="联想 黄金斗士 Note8(A936)融雪白 联通4G手机 双卡双待" src="./proimages/tingzhu.jpg"></a><br></div>-->
+        </div>
+
+
+        <div class="vcotton_box">
+            <div class="martop10 index_tit2 index_tit_bg">Bargain</div>
+            <asp:Repeater ID="bargainProducts" runat="server">
+                <ItemTemplate>
+                    <div class="special_mid martop5" style="padding-bottom: 20px;">
+                        <a href='infodetail.aspx?productId=<%#Eval("ProductId") %>' target="_self">
+                            <img width="350px" height="350px;" style="cursor: pointer" title="<%# Eval("Name")%>" border="0" alt='' src='showProductPicture.aspx?productid=<%# Eval("ProductId")%>' />
+                        </a>
+                        <br />
+                        <div align="center" style="padding-left: 60px;">
+                            <a id='Default_ctl28' href='infodetail.aspx?productid=<%# Eval("ProductId")%>'><%# Eval("Name")%></a><br>
+                            <span class='SalePrice' style="text-decoration: line-through; color: #333; font-size: 14px;">¥<%# Eval("Price")%></span><br />
+                            <span style="color: #a10101;">¥<%# Eval("BargainPrice")%></span>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+
+            <!--<div class="special_mid martop5"><a href="infodetail.aspx?id=10" target="_self"><img style=" cursor:pointer" title="三星 Galaxy Note Edge (N9150) 幻影白 移动联通4G手机" border="0" alt="三星 Galaxy Note Edge (N9150) 幻影白 移动联通4G手机" src="./proimages/zhengnengliang.jpg"></a><br></div>
+	<div class="special_mid martop5"><a href="infodetail.aspx?id=11" target="_self"><img style=" cursor:pointer" title="联想 黄金斗士 Note8(A936)融雪白 联通4G手机 双卡双待" border="0" alt="联想 黄金斗士 Note8(A936)融雪白 联通4G手机 双卡双待" src="./proimages/tingzhu.jpg"></a><br></div>-->
+        </div>
+
+        <div class="vcotton_box">
+            <div class="martop10 index_tit2 index_tit_bg">
+                <span>All Phones</span><span class="newmore"></span><p></p>
+            </div>
+            <div>
+                <ul class="ngoodslist">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div align="center">
+                <span style="color: #0268a1; line-height: normal;">&nbsp;&nbsp;&nbsp; Copyright (C) Jim Lin 2014-2018, All Rights Reserved</span>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
